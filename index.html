@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="jquery-1.10.1.js"></script>
+<link rel="stylesheet" type="text/css" href="font/style.css">
+<script type="text/javascript">
+    window.onload = function(){
+
+        let section=document.querySelectorAll(".section");
+        let inner=document.querySelector(".inner");
+        let pagers=document.querySelectorAll(".pager");
+
+    
+    let obj=pagers[0];
+    let h=window.innerHeight;
+    let arr=["my","skill","proget","d","e"];
+    location.hash="#my";
+    window.onhashchange=function(){
+        let hash=location.hash;
+        let index = arr.indexOf(hash.slice(1));
+        obj.classList.remove("active");
+        pagers[index].classList.add("active");
+        obj=pagers[index];
+        inner.style.marginTop=-h*index+"px";
+    };
+    flag=true;
+    inner.onwheel=function(e) {
+        if (flag) {
+            flag=false;
+            let dir = e.deltaY > 0 ? "down" : "up";
+            let hash = location.hash;
+            let index = arr.indexOf(hash.slice(1));
+            let target;
+            if (dir === "down") {
+                target=arr[index+1]
+            }else{
+                target=arr[index-1];
+            }
+            if(target){
+                location.hash="#"+target;
+            }
+        }
+    }
+    inner.addEventListener("transitionend",function(){
+        flag=true;
+    })
+        }
+
+    </script>
+<body>
+    <div class="container">
+        <div class="inner">
+            <div class="section main">
+                <div class="bg">
+                </div >
+                <div class="top-bar">
+                    <div class="top-bar-left">
+                        <img src="img/meishi.png" class="meishi">
+                    </div>
+                    <div class="nav">
+                        <ul>
+                            <li class="active">
+                                <a href="index.html"><span>首页</span></a>
+                            </li>
+                            <li>
+                                <a href="special.html"><span>特色菜品</span></a>
+                            </li>
+                            <li>
+                                <a href="culture.html"><span>文化传承</span></a>
+                            </li>
+                            <li>
+                                <a href="map.html"><span>美食分布</span></a>
+                            </li>
+                            <li >
+                                <a href="contact.html"><span>联系我们</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                   <!--  <script>
+                   var lis = document.querySelectorAll('.nav>ul>li')
+                               console.log(lis)
+                               for (var i = 0; i < lis.length; i++) {
+                                   lis[i].onclick = function(event) {
+                   let li = document.getElementsByClassName('active')[0]
+                   li.classList.remove('active')
+                   event.target.classList.add('active')
+                                   }
+                               }   
+                   </script> -->
+                </div>
+                <div class="img-wrap">
+                    <img src="img/word1.png" class="img-content">
+                </div>
+            </div>
+
+
+
+
+            <div class="section two">
+                <div class="two-wrap">
+                    <div class="two-left">
+                        <img src="img/two3.png" class="two3">
+                        <p class="small">BEIJING GOURMET FOOD COMPANY WEBSITE</p>
+                        <div class="two-left-content">
+                            <p class="much">触碰一座城市的记忆。“匠铸”运用传统的非遗手工艺技法以及现代的创意设计手法，结合地域文化元素，创作精致工艺作品，打造文化创意空间，分享文艺品质生活。“匠铸”希望每一名旅行者都能感受到中国传世记忆的魅力，希望每个人的旅途记忆都变得更有滋味，希望每个人的生活，都因为充满情感记忆，而更有意义。打造文化创意空间，分享文艺品质生活。希望每一名旅行者都能感受到中国传世记忆的魅力。</p>
+                        </div>
+                    </div>
+                    <div class="two-right">
+                        <img src="img/two1.png" class="two1">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <div class="section">
+                <div class="three-wrap">
+                    <div class="three-wrap-left">
+                        <img src="img/three1.png" class="three-wrap-left-content">
+                        <div class="red-wrap">
+                            <div class="red-wrap-content">
+                                <div class="red-wrap-word">
+                                <p>特</p>
+                                <p>色</p>
+                                <p>菜</p>
+                                <p>品</p>
+                            </div>
+                            <div class="red-wrap-img">
+                                <img src="img/three3.png">
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="three-wrap-right">
+                        <div class="intro-wrap">
+
+
+
+
+
+                            <div class="intro-content">
+                               
+                               <div class="intro-content-on">
+                                   <div class="caiming">
+                                      <p class="first">01</p>
+                                       <div class="caiming-img"> <img src="img/conbine1.jpg"></div>
+                                   </div>
+                               </div>
+                                <div class="cai1">
+                                    <p>仔姜美蛙</p>
+                                    <p>Ginger frog</p>
+                                </div>
+                           </div>
+                           
+                           
+                           <div class="intro-content">
+                               <div class="intro-content-on">
+                                   <div class="caiming">
+                                      <p class="first">02</p>
+                                       <div class="caiming-img"> <img src="img/combine2.png"></div>
+                                   </div>
+                               </div>
+                               <div class="cai1">
+                                    <p>火爆黄喉</p>
+                                    <p>Hot Yellow Throat</p>
+                                </div>
+                           </div>
+
+
+                           <div class="intro-content">
+                               <div class="intro-content-on">
+                                   <div class="caiming">
+                                      <p class="first">03</p>
+                                       <div class="caiming-img"> <img src="img/combine3.png"></div>
+                                   </div>
+                               </div>
+                               <div class="cai1">
+                                    <p>冷吃兔</p>
+                                    <p>Cold rabbit</p>
+                                </div>
+                           </div>
+
+
+                           <div class="intro-content">
+                               <div class="intro-content-on">
+                                   <div class="caiming">
+                                      <p class="first">04</p>
+                                       <div class="caiming-img"> <img src="img/combine4.png"></div>
+                                   </div>
+                               </div>
+                               <div class="cai1">
+                                    <p>水煮肉片</p>
+                                    <p>Boiled meat</p>
+                                </div>
+                           </div>
+
+
+                           <div class="intro-content">
+                               <div class="intro-content-on">
+                                   <div class="caiming">
+                                      <p class="first">05</p>
+                                       <div class="caiming-img"> <img src="img/combine5.png"></div>
+                                   </div>
+                               </div>
+                               <div class="cai1">
+                                    <p>麻婆豆腐</p>
+                                    <p>Mapo Tofu</p>
+                                </div>
+                           </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="section taste">
+                <div class="taste-all">
+                    <div class="taste-word-wrap">
+                        <div class="taste-word">
+                            <p class="p1">口味分类</p>
+                            <p class="p2">TASTE CLASSIFY</p>
+                        </div>
+                        <div class="taste-arrow">
+                            <div class="leftmove"  onclick="moveleft()"><span class="icon-1"></div>
+                            <div class="rightmove"  onclick="moveright()"><span class="icon-uniE900"></span> </div>
+                        </div>
+                    </div>
+
+                    <div class="scroll-wrap">
+                        <div id="maincontent">
+                            <ul id="ul1">
+                                <li>
+                                    <div class='chardiv'>
+                                        <div class="big">
+                                            <img src="img/taste6.jpg" class="ibig">
+                                        </div>
+                                        <div class="explain">
+                                            <span>鱼香味
+                                        葱姜蒜泥1.泡椒0.5.四川豆瓣酱2.糖1.5.醋1.5.酱油、酒适量。调法是先煸葱、姜、蒜、泡椒，再煸豆瓣酱出红油，与其他调料混合。色红味甜、酸、辣均衡，都不算太浓。可做鱼香肉丝、鱼香茄子、鱼香蘸汁等。</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='chardiv'>
+                                        <div class="big">
+                                            <img src="img/taste1.jpg" class="ibig">
+                                        </div>
+                                        <div class="explain">
+                                            <span>麻辣味花椒0.5或花椒粉0.2.干辣椒0.3.四川豆瓣酱3.糖1.醋1.葱、姜、蒜、酒、酱油适量。调法是先将干辣椒段炸至褐色，再下花椒炒香，煸葱姜蒜之后下其他调料。为取麻味，还可加些花椒粉。</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='chardiv'>
+                                        <div class="big">
+                                            <img src="img/taste7.jpg" class="ibig">
+                                        </div>
+                                        <div class="explain">
+                                            <span>辣子味
+                                            四川豆瓣酱1.糖0.3.醋0.3.葱、姜、蒜及酱油、酒适量。调法是先下葱姜蒜煸香，再将豆瓣酱煸炒出红油，下其他料调和。特点是鲜辣中带有极微的甜酸味。可制辣子鸡丁，辣子鱼丁等菜。</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='chardiv'>
+                                        <div class="big">
+                                            <img src="img/taste3.jpg" class="ibig">
+                                        </div>
+                                        <div class="explain">
+                                            <span>陈皮味
+                                            花椒0.5.干辣椒1.四川豆瓣酱3.糖2.陈皮2.酱油、葱、姜、蒜、酒适量。调制法为先将干椒炸焦，再煸花椒出香味，如用陈皮块，亦加煸炒，若用烤干的陈皮碾成的粉，可在烹调近完毕时洒入。</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='chardiv'>
+                                        <div class="big">
+                                            <img src="img/taste4.jpg" class="ibig">
+                                        </div>
+                                        <div class="explain">
+                                            <span>椒麻味
+                                            葱白10.花椒2.酱油12.糖2.醋2.鲜汤少许。制法是将花椒用酒浸泡一夜，然后与葱白一起剁成细泥，加酱油、糖、醋等其他料调拌而成。特点是麻香鲜咸。可用于调拌椒麻允片、椒麻肚片等菜。</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='chardiv'>
+                                        <div class="big">
+                                            <img src="img/taste5.jpg" class="ibig">
+                                        </div>
+                                        <div class="explain">
+                                            <span>怪味
+                                            四川豆瓣酱1.芝麻酱1.糖0.8.醋0.8.花椒粉0.05.油1.葱、蒜泥各0.1.酱油、鲜汤适量。制法是先以油煸四川豆瓣酱至油变红，用鲜汤调开芝麻酱，再加上所有作料调拌均匀而成。味觉非常丰富。可调制怪味鸡丁等等。</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='chardiv'>
+                                        <div class="big">
+                                            <img src="img/taste2.jpg" class="ibig">
+                                        </div>
+                                        <div class="explain">
+                                            <span>酸辣味
+                                            辣味有用于炒爆菜和用于烩菜之分，前者比例为：四川豆瓣酱1，糖0.6，醋0.9，葱、姜、蒜及酒。制法是先煸葱、姜、蒜和豆瓣酱，再调和其他味料。后者比例为白胡椒粉0.8，醋6，葱花香菜末6，麻油少许。</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='chardiv'>
+                                        <div class="big">
+                                            <img src="img/taste8.jpg" class="ibig">
+                                        </div>
+                                        <div class="explain">
+                                            <span>辣子味
+                                                四川豆瓣酱1.糖0.3.醋0.3.葱、姜、蒜及酱油、酒适量。调法是先下葱姜蒜煸香，再将豆瓣酱煸炒出红油，下其他料调和。特点是鲜辣中带有极微的甜酸味。可制辣子鸡丁，辣子鱼丁等菜。
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <script type="text/javascript" >
+                        function moveleft(){
+                            var scrleft = $("#maincontent").scrollLeft();
+                            if(scrleft>0) $("#maincontent").animate({scrollLeft:(scrleft-305)},500);
+                        }
+                        function moveright(){
+                            var licount = $("#ul1").children("li").size(); //li个数
+                            var perwidth = 250 + 55;//每个li的宽度和左控的和
+                            var liwidths = licount * perwidth; //所有li的总宽度
+                            var targetScrol = liwidths;//li总宽度减去外层div的宽度。即得到滚动条需要滚动的长度
+                            var scrleft = $("#maincontent").scrollLeft();//目前滚动条的滚动长度
+                            if(!isNaN(targetScrol) && (scrleft < targetScrol)){
+                                $("#maincontent").animate({"scrollLeft":scrleft+perwidth},500); //若 目前的滚动条的长度小于 最终需要滚动的长度，则向左拉动滚动条，拉动的距离为 一个li的宽度和它的左外空的距离。
+                            }
+        
+                        }
+                    </script>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="section last">
+                <div class="last-redwrap">
+                    <div class="last-word">
+                        <p class="p1">川菜介绍</p>
+                        <p class="p2">CHUANCAI JIESHAO</p>
+                    </div>
+                    <div class="last-videobg-wrap">
+                        <div class="last-left">
+                            <img src="img/last-left.jpg">
+                        </div>
+                        <div class="last-videobg">
+                            <video  controls >
+                                <source src="img/intro.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="last-right">
+                            <img src="img/last-right.jpg">
+                        </div> 
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+
+
+
+        <div class="pagerbox">
+            <a href="#my" class="pager active"></a>
+            <a href="#skill" class="pager"></a>
+            <a href="#proget" class="pager"></a>
+            <a href="#d" class="pager"></a>
+            <a href="#e" class="pager"></a>
+        </div>
+    </div>
+
+</body>
+</html>

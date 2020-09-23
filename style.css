@@ -1,0 +1,563 @@
+html,body{
+    margin: 0;
+    padding:0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.container{
+    width: auto;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+ }
+.inner{
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+}
+.section{
+    width: 100%;
+    height: 100%;
+
+}
+
+
+/* 右侧小球导航 */
+.pagerbox{
+    position: fixed;
+    right: 20px;
+    top: 35%;
+    width: 30px;
+    height: 200px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+.pager{
+    background: #b0b0b0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.pagerbox .active{
+    background: #ff2233;
+}
+/* 第一屏 */
+.main{
+    overflow: hidden;
+    position: relative;
+
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url(img/main1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: fate 20s ease-in-out infinite ;
+}
+@keyframes fate{
+    0%{transform:scale(1);}
+    10%{transform:scale(1.005);}
+    20%{transform:scale(1.03);}
+    30%{transform:scale(1.04);}
+    40%{transform:scale(1.05);}
+    50%{transform:scale(1.06);}
+    60%{transform:scale(1.05);}
+    70%{transform:scale(1.04);}
+    80%{transform:scale(1.03);}
+    90%{transform:scale(1.02);}
+    100%{transform:scale(1.01);}
+}
+/* 导航栏 */
+.top-bar{
+    width:100%;
+    height: 12%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    position: fixed;
+    top: 0;
+    z-index: 6666;
+    display: flex;
+   /*  background-color: transparent; */ 
+   background-color: rgb(200, 9, 49);
+}
+.top-bar-left{
+    width: 15%;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+     text-align: center;
+}
+.top-bar-left .left-wrap{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.meishi{
+    width: 95px;
+    height: 68px;
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+    padding-top: 3%;
+}
+.nav{
+    width: 85%;
+}
+.nav ul {  
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+.nav ul li{
+    color: #fff;
+    font-size: 17px;
+    list-style: none;
+    font-weight: 600;
+    width: 10%;
+    margin : 0 4%;
+    line-height: 530%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.nav ul li a{
+    text-decoration: none;
+    display: block;
+    height: 100%;
+}
+.nav ul li a span{
+    color: rgba(255, 255, 255, 1);
+}
+/* .nav li:hover{
+    cursor: pointer;
+    border-bottom:2px solid rgba(255, 255, 255, 1);
+}  */
+.active{
+    border-bottom:2px solid rgba(255, 255, 255, 1);
+}
+/* .top-bar-right .menu-link{
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color:rgba(255, 255, 255, 1); 
+} */
+
+
+
+
+
+
+
+
+/* 第一屏的文字 */
+.img-wrap{
+    position: absolute;
+    top: 21%;
+    padding-left: 9%;
+}
+.img-content{
+    width: 412px;
+    height: 576px;
+}
+
+
+
+/* 第二屏 */
+.two{
+    background: url(img/two2.png);
+   
+}
+.two-wrap{
+    padding-top: 15%;
+    padding-left: 10%;
+    display: flex;
+}
+.two3{
+    width: 552px;
+    height: 95px;
+}
+.two1{
+    width: 80%;
+}
+.two-left{
+    width: 40%;
+    padding-right: 5%;
+}
+.two-left .small{
+    text-align: left;
+    font-size: 18px;
+    color: rgba(31, 39, 52, 1);
+    padding-bottom: 8%;
+}
+.two-left-content .much{
+    font-size:14px ;
+    color: rgba(64, 64, 64, 1);
+    letter-spacing: 1px;
+    line-height: 2;
+    width: 85%;
+}
+
+
+/* 第三屏 */
+.three-wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.three-wrap-left{
+    width: 18%;
+    position: relative;
+}
+.three-wrap-left-content{
+    width: 100%;
+    height: 100%;
+    transform:scale(1);
+}
+.red-wrap{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(200, 9, 49,0.9);
+    position: absolute;
+    top: 0;
+}
+.red-wrap-content{
+    display: flex;
+    margin-top: 110%;
+    margin-left: 40%;
+}
+.red-wrap-word p{
+    color: rgba(255, 255, 255, 1);
+    font-size: 36px;
+    font-weight: 400;
+    margin: 0;
+}
+.red-wrap-img{
+    margin-left: 10%;
+    margin-top: 8%;
+}
+.red-wrap-img img{
+    width: 50%; 
+}
+.three-wrap-right{
+    width: 82%;
+    background: url(img/three2.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position:  120% 0%;
+}
+
+
+
+/* 介绍5个菜品 */
+.intro-wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: rgba(0,0,0,0.3);
+}
+ .intro-content{
+    width: 20%;
+    height: 100%;
+    background-color: transparent;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+.intro-content-on{
+    width: 100%;
+    height: 0%;
+    background: rgb(200, 9, 49);
+    transition: height 0.5s;
+    transition: all 0.36s ease;
+    z-index: -10;
+    opacity: 0;
+
+
+  
+}
+.intro-content:hover .intro-content-on{
+    height: 100%;
+    width: 100%;
+    background: rgb(200, 9, 49);
+    opacity: 1;
+    z-index: -10;
+}
+
+.intro-content .caiming{
+    z-index: 10;
+    padding-top:45%;
+}
+.intro-content span{
+    text-align: center;
+}
+.first{
+    font-size: 60px;
+    color: #fff;
+    text-align: center;
+}
+.caiming-img{
+    width: 80%;
+    overflow: hidden;
+    margin-left: 10%;
+    margin-top: 63%;
+}
+.caiming img{
+    transform: scale(1);
+
+}
+
+
+
+.cai1 p{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+.cai1{
+    margin-top: 150%;
+     transition: all 0.5s ease;
+}
+.intro-content:hover .cai1{
+    margin-top: -180%;
+}
+
+
+
+
+
+.taste{
+    position: relative;
+
+}
+.taste-arrow{
+    width: 30%;
+    float: right;
+    margin-left : 39%;
+    display: flex;
+     margin-top: 2%;
+}
+.taste-all{
+    margin-left: 8%;
+
+}
+.taste-word-wrap{
+    display: flex;
+    position: absolute;
+    top: 20%;
+    margin-left: 55px;
+    width: 100%;
+}
+.taste-word{
+    width: 30%;
+}
+.taste-word p{
+    margin: 0;
+}
+.taste-word .p1{
+    color: rgba(157, 42, 41, 1);
+    font-size: 32px;
+    font-weight: bold;
+}
+.taste-word .p2{
+    color: rgba(51, 51, 51, 1);
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 6%;
+}
+.scroll-wrap{
+    width: 1220px;
+    height: 450px;
+   /*  background-color: red; */
+   background-color: transparent;
+    position: absolute;
+    top: 32%;
+}
+#maincontent{
+    width:1220px;
+    /* border:1px solid #0FC; */
+    height:100%;
+    overflow:hidden;
+    text-align: center;
+}
+#ul1{
+    list-style-type:none; 
+    width:2440px;
+    height: 100%;
+    padding-left: 0;
+}
+     
+#ul1 li{
+    float:left; 
+    margin-top: 1%;
+    margin-left: 55px;
+}
+.imgdiv{
+    background-image:url(img.png);
+    background-position:top center;
+    background-repeat:no-repeat;
+    width:62px;
+    height:62px;    
+}
+.chardiv{
+    text-align:center; 
+    width: 250px; 
+    box-shadow: 0px 0px 10px #dfdfdf;
+    background-color: #fff;
+    border: 0 solid rgba(0, 0, 0, 0.125);
+}
+.chardiv .ibig{
+    width: 250px;
+    height: 170px;
+     overflow: hidden;
+     transition: ease-in-out .3s;
+}
+.chardiv .big{
+     width: 250px;
+    height: 170px;
+     overflow: hidden;
+
+}
+.chardiv .big:hover .ibig{
+    transform: scale(1.3);
+    cursor: pointer;
+
+}
+.chardiv .explain{
+    padding: 15px;
+}
+.chardiv .explain span{
+    font-weight: 300;
+    line-height: 2;
+    color: #999999;
+    font-size: 15px;
+}
+.leftmove{
+    cursor:pointer;
+    float:left;
+    width: 23px;     
+    height:23px;
+    text-align:center;
+    color: rgba(200, 9, 49, 1);
+    background: rgba(255, 255, 255, 0);
+    margin: 0px 15px 0px 0px;
+    border: 2px solid rgba(200, 9, 49, 1);
+    border-radius: 40px 40px 40px 40px;
+    padding: 8px 8px 8px 8px;
+    transition: ease-in-out .3s;
+}
+.leftmove:hover{
+    color: rgba(255, 255, 255, 1);
+    background: rgba(200, 9, 49, 1);
+}
+.rightmove{
+    cursor:pointer;
+    float:left;
+    width: 23px;     
+    height:23px;  
+    text-align:center;
+    color: rgba(200, 9, 49, 1);
+    background: rgba(255, 255, 255, 0);
+    margin: 0px 15px 0px 0px;
+    border: 2px solid rgba(200, 9, 49, 1);
+    border-radius: 40px 40px 40px 40px;
+    padding: 8px 8px 8px 8px;
+    transition: ease-in-out .3s;
+}
+.rightmove:hover{
+    color: rgba(255, 255, 255, 1);
+    background: rgba(200, 9, 49, 1);
+}
+#ul1 img{
+    width: 250px;
+}
+.icon-1{
+    font-size: 23px;
+    display: inline-block;
+    color: rgb(200, 9, 49);
+}
+.leftmove:hover .icon-1{
+    color: #fff;
+}
+.rightmove:hover .icon-uniE900{
+    color: #fff;
+}
+.icon-uniE900{
+    font-size: 23px;
+    display: inline-block;
+    color: rgb(200, 9, 49);
+}
+
+
+
+/* 最后一屏 */
+.last{
+    width: 100%;
+    height: 100%;
+    background:url(img/five.jpg);
+    background-repeat: no-repeat;
+    background-position: 30% 20%;
+    position: relative;
+}
+.last-redwrap{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(200, 9, 49,0.9)
+}
+.last-word{
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    margin-top: 8%;
+}
+.last-word .p1{
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-size: 36px;
+    margin-bottom: 0;
+}
+.last-word .p2{
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+}
+.last-videobg-wrap{
+    width: 100%;
+    height: 63%;
+   /*  background-color: green; */
+    position: relative;
+    display: flex;
+}
+.last-left{
+    width: 22%;
+    height: 100%;
+   /*  margin-right: 10%; */
+    position: absolute;
+    left: -26%; 
+}
+.last-left img{
+    height: 100%;
+}
+.last-videobg{
+    width: 54%;
+    height: 100%;
+    position: absolute;
+    left: 22%;
+}
+.last-videobg video{
+    
+    height: 100%;
+}
+.last-right{
+    width: 22%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+.last-right img{
+    
+    height: 100%;
+    overflow: hidden;
+}

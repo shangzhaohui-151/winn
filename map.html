@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="map.css">
+	<script type="text/javascript" src="jquery-1.10.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="font2/style.css">
+	<script type="text/javascript">
+		function search(){			
+				var str = document.getElementById("text").value;
+				/*$.ajax({
+					url:"http://api.map.baidu.com/staticimage/v2",
+					type:"GET",
+					dataType:"JSONP",
+					data:{
+						ak:"CmVpBxsdUaeEctcGMznZ0oo8ek6kUobW",
+						center: str,
+						zoom:10,
+						dtype: "json",
+
+					},
+					success:function(map){
+
+						
+						
+					}
+
+				})*/
+				alert(str)
+				
+				var url = "http://api.map.baidu.com/staticimage/v2?ak=" + "CmVpBxsdUaeEctcGMznZ0oo8ek6kUobW&center="+str+"&zoom=10"+"&scale=2"+"&height=431"+"&width=494";	
+				//var we = document.getElementById("#we");
+				$('#we').empty();
+				$("#we").append('<img id="map"  src="' + url + '"/>');
+
+
+		}
+	</script>
+</head>
+<body>
+	<div class="top-bar">
+        <div class="top-bar-left">
+           <img src="img/meishi.png" class="meishi">
+        </div>
+        <div class="nav">
+            <ul>
+                <li >
+                    <a href="index.html"><span>首页</span></a>
+                </li>
+                <li>
+                    <a href="special.html"><span>特色菜品</span></a>
+                </li>
+                <li>
+                    <a href="culture.html"><span>文化传承</span></a>
+                </li>
+                <li class="active">
+                    <a href=""><span>美食分布</span></a>
+                </li>
+                <li >
+                    <a href="contact.html"><span>联系我们</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="map-wrap">
+		<div class="map-wrap-left">
+			<div class="map-left">
+				<div class="map-search">
+					<input type="text" name="" placeholder="全国门店搜索" id="text">
+					<button onclick="search()"><span class="icon-1"></span></button>
+				</div>
+				<span class="icon-uniE901"></span>
+				<div class="map-word" style="margin-top: 13%">
+					<div>
+						<p class="map-p1">川菜美食（锦江店）</p>
+						<p>电话：028-4567890</p>
+						<p>地址：成都市锦江区四川锦江宾馆</p>
+					</div>
+				</div>
+				<div class="map-word">
+					<div>
+						<p class="map-p1">川菜美食（天府广场店）</p>
+						<p>电话：028-67909090</p>
+						<p>地址：成都市青羊区天府广场</p>
+					</div>
+				</div>
+				<div class="map-word">
+					<div>
+						<p class="map-p1">川菜美食（茶店子店）</p>
+						<p>电话：029-40050060</p>
+						<p>地址：成都市金牛区茶店子-地铁站</p>
+					</div>
+				</div>
+				<div class="map-word">
+					<div>
+						<p class="map-p1">川菜美食（玉林店）</p>
+						<p>电话：028-69707800</p>
+						<p>地址：成都市武侯区玉林西路80号院</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="map-wrap-right" id="we">
+			<img id="map"  src="http://api.map.baidu.com/staticimage/v2?ak=CmVpBxsdUaeEctcGMznZ0oo8ek6kUobW&width=494&center=四川&height=431&zoom=10&scale=2"/>
+
+			
+		</div>
+    </div>
+</body>
+</html>
